@@ -45,7 +45,8 @@ namespace TrainingPractice_02
             {
                 foreach (var button in Controls.OfType<Button>())
                 {
-                    button.Text = "?"; // назначение ?
+                    button.Text = "?";
+                    button.BackgroundImage = null;
                 }
 
                 first_button_tab_index.Text = Convert.ToString((sender as Button).Name); 
@@ -57,13 +58,19 @@ namespace TrainingPractice_02
                         if (element % 2 == 0)
                         {
                             wanted_result.Text = Convert.ToString(pairs[element + 1]);
-                            (sender as Button).Text = Convert.ToString(pairs[Convert.ToInt32(place_in_list1.Text)]);// КАРТИНКА
+                            (sender as Button).Text = "";
+                            string path = Convert.ToString(pairs[Convert.ToInt32(place_in_list1.Text)]);
+                            (sender as Button).BackgroundImage = Image.FromFile($@"C:\Records\pictures\{path}.jpg", false);
+                            (sender as Button).BackgroundImageLayout = ImageLayout.Center;
                         }
                             
                         else
                         {
                             wanted_result.Text = Convert.ToString(pairs[element - 1]);
-                            (sender as Button).Text = Convert.ToString(pairs[Convert.ToInt32(place_in_list1.Text) - 1]);// КАРТИНКА
+                            (sender as Button).Text = "";
+                            string path = Convert.ToString(pairs[(Convert.ToInt32(place_in_list1.Text)) - 1]);
+                            (sender as Button).BackgroundImage = Image.FromFile($@"C:\Records\pictures\{path}.jpg", false);
+                            (sender as Button).BackgroundImageLayout = ImageLayout.Center;
                         }
                         break;
                     }
@@ -83,9 +90,19 @@ namespace TrainingPractice_02
                         place_in_list2.Text = Convert.ToString(element);
                         
                         if (element % 2 == 0)
-                            (sender as Button).Text = Convert.ToString(pairs[Convert.ToInt32(place_in_list2.Text)]);// КАРТИНКА
+                        {
+                            (sender as Button).Text = "";
+                            string path = Convert.ToString(pairs[Convert.ToInt32(place_in_list2.Text)]);
+                            (sender as Button).BackgroundImage = Image.FromFile($@"C:\Records\pictures\{path}.jpg", false);
+                            (sender as Button).BackgroundImageLayout = ImageLayout.Center;
+                        }
                         else
-                            (sender as Button).Text = Convert.ToString(pairs[Convert.ToInt32(place_in_list2.Text) - 1]);// КАРТИНКА
+                        {
+                            (sender as Button).Text = "";
+                            string path = Convert.ToString(pairs[(Convert.ToInt32(place_in_list2.Text)) - 1]);
+                            (sender as Button).BackgroundImage = Image.FromFile($@"C:\Records\pictures\{path}.jpg", false);
+                            (sender as Button).BackgroundImageLayout = ImageLayout.Center;
+                        }
                         break;
                     }   
                 }
