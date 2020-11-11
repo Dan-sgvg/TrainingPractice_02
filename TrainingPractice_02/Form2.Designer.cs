@@ -76,9 +76,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(12, 46);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 20);
+            this.label4.Size = new System.Drawing.Size(60, 20);
             this.label4.TabIndex = 41;
-            this.label4.Text = "Ошибки:";
+            this.label4.Text = "Ходы:";
             // 
             // textBox1
             // 
@@ -108,6 +108,7 @@
             this.label1.Size = new System.Drawing.Size(46, 17);
             this.label1.TabIndex = 46;
             this.label1.Text = "label1";
+            this.label1.Visible = false;
             // 
             // first_button_tab_index
             // 
@@ -117,6 +118,7 @@
             this.first_button_tab_index.Size = new System.Drawing.Size(46, 17);
             this.first_button_tab_index.TabIndex = 45;
             this.first_button_tab_index.Text = "label5";
+            this.first_button_tab_index.Visible = false;
             // 
             // second_button_tab_index
             // 
@@ -126,6 +128,7 @@
             this.second_button_tab_index.Size = new System.Drawing.Size(46, 17);
             this.second_button_tab_index.TabIndex = 47;
             this.second_button_tab_index.Text = "label5";
+            this.second_button_tab_index.Visible = false;
             // 
             // label5
             // 
@@ -135,6 +138,7 @@
             this.label5.Size = new System.Drawing.Size(46, 17);
             this.label5.TabIndex = 48;
             this.label5.Text = "label5";
+            this.label5.Visible = false;
             this.label5.Click += new System.EventHandler(this.Label5_Click);
             // 
             // place_in_list1
@@ -145,6 +149,7 @@
             this.place_in_list1.Size = new System.Drawing.Size(46, 17);
             this.place_in_list1.TabIndex = 49;
             this.place_in_list1.Text = "label6";
+            this.place_in_list1.Visible = false;
             // 
             // place_in_list2
             // 
@@ -154,6 +159,7 @@
             this.place_in_list2.Size = new System.Drawing.Size(46, 17);
             this.place_in_list2.TabIndex = 50;
             this.place_in_list2.Text = "label6";
+            this.place_in_list2.Visible = false;
             // 
             // wanted_result
             // 
@@ -163,6 +169,7 @@
             this.wanted_result.Size = new System.Drawing.Size(46, 17);
             this.wanted_result.TabIndex = 51;
             this.wanted_result.Text = "label6";
+            this.wanted_result.Visible = false;
             // 
             // Form2
             // 
