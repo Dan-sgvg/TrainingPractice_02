@@ -60,7 +60,7 @@ namespace TrainingPractice_02
                             wanted_result.Text = Convert.ToString(pairs[element + 1]);
                             (sender as Button).Text = "";
                             string path = Convert.ToString(pairs[Convert.ToInt32(place_in_list1.Text)]);
-                            (sender as Button).BackgroundImage = Image.FromFile($@"C:\Records\pictures\{path}.jpg", false);
+                            (sender as Button).BackgroundImage = Image.FromFile($@"pictures\{path}.jpg", false);
                             (sender as Button).BackgroundImageLayout = ImageLayout.Center;
                         }
                             
@@ -69,7 +69,7 @@ namespace TrainingPractice_02
                             wanted_result.Text = Convert.ToString(pairs[element - 1]);
                             (sender as Button).Text = "";
                             string path = Convert.ToString(pairs[(Convert.ToInt32(place_in_list1.Text)) - 1]);
-                            (sender as Button).BackgroundImage = Image.FromFile($@"C:\Records\pictures\{path}.jpg", false);
+                            (sender as Button).BackgroundImage = Image.FromFile($@"pictures\{path}.jpg", false);
                             (sender as Button).BackgroundImageLayout = ImageLayout.Center;
                         }
                         break;
@@ -93,14 +93,14 @@ namespace TrainingPractice_02
                         {
                             (sender as Button).Text = "";
                             string path = Convert.ToString(pairs[Convert.ToInt32(place_in_list2.Text)]);
-                            (sender as Button).BackgroundImage = Image.FromFile($@"C:\Records\pictures\{path}.jpg", false);
+                            (sender as Button).BackgroundImage = Image.FromFile($@"pictures\{path}.jpg", false);
                             (sender as Button).BackgroundImageLayout = ImageLayout.Center;
                         }
                         else
                         {
                             (sender as Button).Text = "";
                             string path = Convert.ToString(pairs[(Convert.ToInt32(place_in_list2.Text)) - 1]);
-                            (sender as Button).BackgroundImage = Image.FromFile($@"C:\Records\pictures\{path}.jpg", false);
+                            (sender as Button).BackgroundImage = Image.FromFile($@"pictures\{path}.jpg", false);
                             (sender as Button).BackgroundImageLayout = ImageLayout.Center;
                         }
                         break;
@@ -148,13 +148,13 @@ namespace TrainingPractice_02
                         $"\nи количеством ходов равным:{Convert.ToInt32(textBox2.Text)}\nСохранить результат?","Поздравляю!", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    string path = @"C:\Records";
+                    string path = @"Records";
                     DirectoryInfo dirInfo = new DirectoryInfo(path);
                     if (!dirInfo.Exists)
                     {
                         dirInfo.Create();
                     }
-                    using (FileStream fstream = new FileStream(@"C:\Records\Игра_на_память.txt", FileMode.Append))
+                    using (FileStream fstream = new FileStream(@"Records\Игра_на_память.txt", FileMode.Append))
                     {
                         byte[] array = System.Text.Encoding.Default.GetBytes(" " + Convert.ToString(Convert.ToInt32(label1.Text)/2)+ "\n");
                         fstream.Write(array, 0, array.Length);
