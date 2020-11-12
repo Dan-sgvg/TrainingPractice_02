@@ -42,7 +42,7 @@ namespace TrainingPractice_02
         private void Button2_Click(object sender, EventArgs e)
         {
 
-            if (System.IO.File.Exists(@"C:\Records\Игра_на_память.txt"))
+            if (System.IO.File.Exists(@"Records\Игра_на_память.txt"))
             {
                 Form3 fm3 = new Form3();
                 this.Hide();

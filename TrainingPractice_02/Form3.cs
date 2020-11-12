@@ -21,14 +21,14 @@ namespace TrainingPractice_02
             listBox2.Items.Add("Кол-во ходов:");
             listBox3.Items.Add("Время:");
 
-            string path = @"C:\Records";
+            string path = @"Records";
             DirectoryInfo dirInfo = new DirectoryInfo(path);
             if (!dirInfo.Exists)
             {
                 dirInfo.Create();
             }
 
-            using (var fstream = new StreamReader(@"C:\Records\Игра_на_память.txt"))
+            using (var fstream = new StreamReader(@"Records\Игра_на_память.txt"))
             {
                 string line;
                 int counter = 0;
@@ -101,7 +101,7 @@ namespace TrainingPractice_02
 
         private void button1_Click(object sender, EventArgs e)
         {
-            File.Delete(@"C:\Records\Игра_на_память.txt");
+            File.Delete(@"Records\Игра_на_память.txt");
             Environment.Exit(0);
         }
     }
